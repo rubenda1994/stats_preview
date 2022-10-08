@@ -1,0 +1,106 @@
+/*FROM FRONTEND MENTOR*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*CUSTOM STYLE*/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: sans-serif;
+    
+}
+
+/*WIDGET*/
+.widget {
+    width: 100%;
+    max-width: 980px;
+    min-width: 320px;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .widget{
+        flex-direction: column;
+        height: 150vmax;
+    }
+    .widget .left{
+        text-align: center;
+        padding: 2rem;
+    }
+    .right{
+        order: -1;
+    }
+    .chars{
+        flex-direction: column;
+    }
+}
+
+.left {
+    padding: 3rem 6rem 3rem 3rem;
+    color: white;
+    flex-basis: 50%;
+}
+
+.title {
+    font-size: 2rem;
+    margin-top: 0%;
+    margin-bottom: 1.6rem;
+
+}
+
+.title span{
+    color: hsl(277, 64%, 61%);
+}
+
+.description {
+    color: lightgray;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.chars {
+    display: flex;
+    justify-content: space-between;
+}
+
+.char {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.char span{
+    display: block;
+    font-weight: lighter;
+    font-size: 1rem;
+    margin-top: .6rem;
+}
+
+.right{
+    flex-basis: 50%;
+    background-image: url(../images/image-header-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 85%, 36%, .7);
+}
